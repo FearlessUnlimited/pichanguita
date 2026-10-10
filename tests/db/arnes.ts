@@ -1,6 +1,7 @@
 import { readdirSync, readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
-import { PGlite, type Transaction } from '@electric-sql/pglite'
+import { expect } from 'vitest'
+import { PGlite, type PGliteInterface, type Transaction } from '@electric-sql/pglite'
 import { pgcrypto } from '@electric-sql/pglite/contrib/pgcrypto'
 
 const MIGRACIONES = fileURLToPath(new URL('../../supabase/migrations/', import.meta.url))
@@ -44,9 +45,35 @@ alter default privileges in schema public grant all on sequences to anon, authen
 create publication supabase_realtime;
 `
 
-export type Base = PGlite
+export type Base = PGliteInterface
+
+// Migrar cuesta varios segundos; clonar una base ya migrada, menos de uno. Cada archivo de pruebas
+// migra una sola vez y cada prueba parte de un clon limpio.
+// Cada base reserva su propia memoria de WebAssembly, así que hay que cerrarlas: setup.ts cierra las
+// creadas dentro de una prueba al terminarla, y las creadas en beforeAll (compartidas) al terminar el archivo.
+let plantilla: Promise<PGlite> | undefined
+const abiertas = { porPrueba: [] as Base[], porArchivo: [] as Base[] }
 
 export async function crearBase(): Promise<Base> {
+  plantilla ??= migrar()
+  const db = await (await plantilla).clone()
+  const enPrueba = expect.getState().currentTestName !== undefined
+  abiertas[enPrueba ? 'porPrueba' : 'porArchivo'].push(db)
+  return db
+}
+
+export async function cerrarBases(alcance: 'prueba' | 'archivo') {
+  const lista = alcance === 'prueba' ? abiertas.porPrueba : abiertas.porArchivo
+  const cerrar = lista.splice(0)
+  if (alcance === 'archivo') {
+    cerrar.push(...abiertas.porPrueba.splice(0))
+    if (plantilla) cerrar.push(await plantilla)
+    plantilla = undefined
+  }
+  await Promise.all(cerrar.map((db) => db.close()))
+}
+
+async function migrar(): Promise<PGlite> {
   const db = new PGlite({ extensions: { pgcrypto } })
   await db.exec(PREAMBULO)
   const archivos = readdirSync(MIGRACIONES)

@@ -22,6 +22,7 @@ export default defineConfig(({ mode }) => {
     },
     test: {
       include: ['tests/**/*.test.ts'],
+      setupFiles: ['tests/db/setup.ts'],
       testTimeout: 30000,
       hookTimeout: 60000,
     },
