@@ -1,0 +1,17 @@
+# Investigación y estrategia: van en el repo privado pichanguita-docs, nunca en el repo público
+investigacion/
+
+node_modules/
+dist/
+.env
+.env.local
+.env.*.local
+*.log
+.DS_Store
+
+# Supabase CLI
+supabase/.branches/
+supabase/.temp/
+
+# Configuración local de Claude Code
+.claude/settings.local.json

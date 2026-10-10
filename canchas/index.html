@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pichanguita para canchas</title>
+  <meta name="description" content="Grupos que llegan completos, todas las semanas. Buscamos canchas piloto en Viña del Mar y Valparaíso.">
+  <meta name="theme-color" content="#1d6a44">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <span class="brand">Pichang<span>uita</span></span>
+    <span class="small muted">Canchas piloto en Viña del Mar y Valparaíso</span>
+  </div>
+
+  <header class="hero">
+    <div>
+      <p class="kicker">Para canchas y centros deportivos</p>
+      <h1>Grupos que llegan completos, todas las semanas</h1>
+      <p class="lede">Pichanguita ayuda a los grupos de amigos que arriendan tu cancha a organizarse: lista, banca, cuotas y equipos. Queremos que cancelen menos y vuelvan cada semana.</p>
+      <div class="actions">
+        <a class="cta" href="#piloto">Quiero ser cancha piloto</a>
+        <span class="small muted">Sin costo durante el piloto</span>
+      </div>
+    </div>
+    <aside class="board" aria-label="Ejemplo de la vista semanal de una cancha">
+      <div class="head"><span class="title">Cancha 2 · fútbol 7</span><span class="tag">Ejemplo</span></div>
+      <table>
+        <tbody>
+          <tr><td>Lunes 20:00</td><td>Los del Liceo</td><td><span class="ok">14/14</span></td></tr>
+          <tr><td>Martes 19:00</td><td>Libre</td><td><span class="free">disponible</span></td></tr>
+          <tr><td>Miércoles 21:00</td><td>Oficina Plaza</td><td><span class="ok">13/14</span></td></tr>
+          <tr><td>Jueves 21:00</td><td>Pichanga de Nico</td><td><span class="ok">14/14</span></td></tr>
+          <tr><td>Domingo 18:00</td><td>Libre</td><td><span class="free">disponible</span></td></tr>
+        </tbody>
+      </table>
+    </aside>
+  </header>
+
+  <section aria-labelledby="t-hoy">
+    <p class="kicker">Lo que pasa hoy</p>
+    <h2 id="t-hoy">Cuando un grupo se desordena, la cancha lo paga</h2>
+    <div class="grid3">
+      <div class="pain"><h3>Cancelaciones de último minuto</h3><p>No se juntaron los jugadores y la hora queda vacía.</p></div>
+      <div class="pain"><h3>Grupos que se desarman</h3><p>El organizador se cansa y el grupo deja de venir.</p></div>
+      <div class="pain"><h3>Horas que nadie ocupa</h3><p>Los martes temprano o los domingos en la tarde cuesta llenarlos.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-gana">
+    <p class="kicker">Qué gana tu cancha</p>
+    <h2 id="t-gana">Más orden para tus grupos, sin cambiar cómo trabajas</h2>
+    <div class="grid2">
+      <div class="card">
+        <h3>Durante el piloto</h3>
+        <ul class="check">
+          <li>Tus grupos fijos tienen una herramienta gratis para organizarse y llegar completos.</li>
+          <li>Apareces en el directorio de canchas de Viña y Valparaíso.</li>
+          <li>Ves qué grupos fijos usan Pichanguita en tu cancha.</li>
+          <li>Contacto directo con el equipo para pedir lo que te sirva.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Lo que no cambia</h3>
+        <ul class="check">
+          <li>Sigues usando tu sistema de reservas actual.</li>
+          <li>Te siguen pagando como hoy.</li>
+          <li>No tienes que instalar nada para empezar.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="piloto" class="pilot" aria-labelledby="t-piloto">
+    <p class="kicker">Canchas piloto</p>
+    <h2 id="t-piloto">Buscamos canchas de fútbol 7, futbolito y baby fútbol en Viña y Valparaíso</h2>
+    <p>Queremos construir esto con quienes conocen el día a día de una cancha. Las canchas piloto nos ayudan a definir qué les sirve de verdad, y lo reciben primero.</p>
+
+    <form id="form-canchas" class="form">
+      <h3>Inscribir mi cancha</h3>
+      <div class="fila">
+        <div class="campo">
+          <label for="c-recinto">Nombre del recinto</label>
+          <input id="c-recinto" name="recinto" type="text" required minlength="2" maxlength="120">
+        </div>
+        <div class="campo">
+          <label for="c-comuna">Comuna</label>
+          <input id="c-comuna" name="comuna" type="text" required minlength="2" maxlength="60" placeholder="Valparaíso">
+        </div>
+      </div>
+      <div class="fila">
+        <div class="campo">
+          <label for="c-contacto">Nombre de contacto</label>
+          <input id="c-contacto" name="contacto_nombre" type="text" required minlength="2" maxlength="80" autocomplete="name">
+        </div>
+        <div class="campo">
+          <label for="c-whatsapp">WhatsApp de contacto</label>
+          <input id="c-whatsapp" name="whatsapp" type="tel" inputmode="tel" required maxlength="20" autocomplete="tel" placeholder="+56 9 1234 5678">
+        </div>
+      </div>
+      <div class="campo">
+        <label for="c-correo">Correo (opcional)</label>
+        <input id="c-correo" name="correo" type="email" maxlength="120" autocomplete="email">
+      </div>
+      <div class="fila">
+        <div class="campo">
+          <label for="c-cantidad">¿Cuántas canchas tienen?</label>
+          <input id="c-cantidad" name="cantidad_canchas" type="number" inputmode="numeric" min="1" max="100">
+        </div>
+        <div class="campo">
+          <label for="c-grupos">¿Cuántos grupos fijos tienen cada semana?</label>
+          <input id="c-grupos" name="grupos_fijos" type="number" inputmode="numeric" min="0" max="1000">
+        </div>
+      </div>
+      <fieldset class="campo">
+        <legend>Tipo de canchas</legend>
+        <div class="opciones">
+          <label class="opcion"><input type="checkbox" name="tipos_cancha" value="baby"> Baby fútbol</label>
+          <label class="opcion"><input type="checkbox" name="tipos_cancha" value="futbolito"> Futbolito</label>
+          <label class="opcion"><input type="checkbox" name="tipos_cancha" value="futbol7"> Fútbol 7</label>
+          <label class="opcion"><input type="checkbox" name="tipos_cancha" value="futbol11"> Fútbol 11</label>
+          <label class="opcion"><input type="checkbox" name="tipos_cancha" value="otro"> Otro</label>
+        </div>
+      </fieldset>
+      <div class="campo">
+        <label for="c-reservas">¿Cómo reciben hoy las reservas?</label>
+        <input id="c-reservas" name="sistema_reservas" type="text" maxlength="200" placeholder="WhatsApp, planilla, un sistema en línea…">
+      </div>
+      <div class="campo">
+        <label for="c-horas">¿Qué horas les cuesta llenar?</label>
+        <textarea id="c-horas" name="horas_dificiles" maxlength="1500"></textarea>
+      </div>
+      <div class="trampa" aria-hidden="true">
+        <label>No llenar este campo <input type="text" name="trampa" tabindex="-1" autocomplete="off"></label>
+      </div>
+      <div class="consent">
+        <label class="opcion">
+          <input type="checkbox" name="consentimiento" required>
+          <span>Acepto que Pichanguita use estos datos para coordinar el piloto conmigo. Puedo pedir que los borren cuando quiera. <a href="../privacidad/" target="_blank" rel="noopener">Leer cómo cuidamos tus datos</a>.</span>
+        </label>
+      </div>
+      <div data-estado role="status" aria-live="polite" class="estado" hidden></div>
+      <div><button type="submit" class="cta">Inscribir mi cancha</button></div>
+    </form>
+  </section>
+
+  <section aria-labelledby="t-faq">
+    <p class="kicker">Preguntas</p>
+    <h2 id="t-faq">Lo que suelen preguntar</h2>
+    <div>
+      <details><summary>¿Reemplaza mi sistema de reservas?</summary><p>No. Pichanguita trabaja con los grupos. Tú sigues reservando y cobrando como siempre.</p></details>
+      <details><summary>¿Cuánto cuesta?</summary><p>Para las canchas piloto no tiene costo.</p></details>
+      <details><summary>¿Tengo que hacer algo?</summary><p>Para empezar, no. Si quieres, conversamos sobre tus horarios y tus grupos fijos para que el directorio muestre bien tu cancha.</p></details>
+      <details><summary>¿Qué datos usan?</summary><p>Los que nos das en la inscripción, para coordinar el piloto. No los compartimos con otras canchas.</p></details>
+    </div>
+  </section>
+
+  <footer>Pichanguita · hecho en la V región para la pichanga de todas las semanas. · <a href="../privacidad/">Privacidad</a></footer>
+</div>
+<script type="module" src="/src/publico/canchas.ts"></script>
+</body>
+</html>

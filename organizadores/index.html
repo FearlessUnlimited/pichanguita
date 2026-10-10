@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pichanguita para organizadores</title>
+  <meta name="description" content="La pichanga de cada semana se arma sola: quién va, la banca, quién pagó y los equipos. Buscamos grupos piloto en Viña del Mar y Valparaíso.">
+  <meta name="theme-color" content="#1d6a44">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <span class="brand">Pichang<span>uita</span></span>
+    <span class="small muted">Grupos piloto en Viña del Mar y Valparaíso</span>
+  </div>
+
+  <header class="hero">
+    <div>
+      <p class="kicker">Para quien organiza la pichanga</p>
+      <h1>Deja de ser el que hace todo</h1>
+      <p class="lede">La pichanga de cada semana se arma sola: quién va, quién queda en la banca, quién pagó y cómo quedan los equipos. Todo desde el mismo grupo de WhatsApp que ya usan.</p>
+      <div class="actions">
+        <a class="cta" href="#piloto">Quiero sumar mi grupo</a>
+        <span class="small muted">Sin costo para los grupos piloto</span>
+      </div>
+    </div>
+    <aside class="planilla" aria-label="Ejemplo de cómo se ve una pichanga en Pichanguita">
+      <div class="head"><span class="when">Jueves 21:00</span><span class="tag">Ejemplo</span></div>
+      <div class="tag">Fútbol 7 · $56.000 ÷ 14 = $4.000 c/u</div>
+      <ol>
+        <li>1. Nico (organizador) <span class="pago ef">efectivo</span></li>
+        <li>2. Pato <span class="pago tr">transferido</span></li>
+        <li>3. Feña <span class="pago debe">debe $4.000</span></li>
+        <li>… 14. Cristóbal <span class="pago ef">efectivo</span></li>
+      </ol>
+      <div class="foot">Banca: Seba, Rodrigo, Tito. Si alguien se baja, sube el primero.<br>Trae balón: Pato · petos: Nico.</div>
+    </aside>
+  </header>
+
+  <section aria-labelledby="t-como">
+    <p class="kicker">Cómo funciona</p>
+    <h2 id="t-como">Lo configuras una vez y se repite cada semana</h2>
+    <div class="steps">
+      <div class="step"><h3>Creas tu pichanga fija</h3><p>Día, hora, cancha, cupos y lo que cuesta. Toma un par de minutos y no lo vuelves a hacer.</p></div>
+      <div class="step"><h3>Compartes el link en el grupo</h3><p>Cada uno se anota con su nombre. Cuando se llenan los cupos, los que siguen quedan en la banca.</p></div>
+      <div class="step"><h3>En la cancha, marcas quién pagó</h3><p>Un toque por jugador, en efectivo o transferencia. Al final ves quién debe y cuánto hay en la caja.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-ahorro">
+    <p class="kicker">Lo que te ahorras</p>
+    <h2 id="t-ahorro">Menos mensajes, menos cuentas, menos dolores de cabeza</h2>
+    <div class="grid2">
+      <div class="card">
+        <h3>Para ti</h3>
+        <ul class="check">
+          <li>No andar preguntando uno por uno quién va.</li>
+          <li>Si alguien se baja, el de la banca sube solo y se entera.</li>
+          <li>Saber quién pagó y quién te debe, sin anotar en un papel.</li>
+          <li>Equipos parejos en un toque.</li>
+          <li>Saber quién trae el balón y los petos.</li>
+          <li>Pasarle el mando a otro cuando no puedes ir.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Para tus jugadores</h3>
+        <ul class="check">
+          <li>No tienen que descargar nada ni crear una cuenta.</li>
+          <li>Se anotan con su nombre desde el link del grupo.</li>
+          <li>Siguen pagando como siempre: efectivo o transferencia.</li>
+          <li>Si alguien no usa celular, lo anotas tú.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="piloto" class="pilot" aria-labelledby="t-piloto">
+    <p class="kicker">Grupos piloto</p>
+    <h2 id="t-piloto">Buscamos grupos que juegan todas las semanas en Viña y Valparaíso</h2>
+    <div class="grid2">
+      <div>
+        <h3>Qué buscamos</h3>
+        <ul class="check">
+          <li>Un grupo que juega fútbol 7, futbolito o baby fútbol con día y cancha fijos.</li>
+          <li>Un organizador dispuesto a probarla durante dos meses.</li>
+          <li>Ganas de contarnos qué funciona y qué no.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Qué reciben</h3>
+        <ul class="check">
+          <li>Acceso antes que nadie, sin costo.</li>
+          <li>Contacto directo con quienes la estamos construyendo.</li>
+          <li>Las ideas del grupo se convierten en funciones.</li>
+        </ul>
+      </div>
+    </div>
+
+    <form id="form-organizadores" class="form">
+      <h3>Inscribir mi grupo</h3>
+      <div class="fila">
+        <div class="campo">
+          <label for="o-nombre">Tu nombre</label>
+          <input id="o-nombre" name="nombre" type="text" required minlength="2" maxlength="80" autocomplete="name">
+        </div>
+        <div class="campo">
+          <label for="o-comuna">Comuna donde juegan</label>
+          <input id="o-comuna" name="comuna" type="text" required minlength="2" maxlength="60" placeholder="Viña del Mar">
+        </div>
+      </div>
+      <div class="fila">
+        <div class="campo">
+          <label for="o-whatsapp">Tu WhatsApp</label>
+          <input id="o-whatsapp" name="whatsapp" type="tel" inputmode="tel" maxlength="20" autocomplete="tel" placeholder="+56 9 1234 5678">
+        </div>
+        <div class="campo">
+          <label for="o-correo">O tu correo</label>
+          <input id="o-correo" name="correo" type="email" maxlength="120" autocomplete="email">
+        </div>
+      </div>
+      <p class="ayuda small muted">Basta con uno de los dos contactos.</p>
+      <div class="fila">
+        <div class="campo">
+          <label for="o-dia">Día y hora en que juegan</label>
+          <input id="o-dia" name="dia_hora" type="text" maxlength="80" placeholder="Jueves 21:00">
+        </div>
+        <div class="campo">
+          <label for="o-cancha">Cancha donde juegan</label>
+          <input id="o-cancha" name="cancha" type="text" maxlength="120">
+        </div>
+      </div>
+      <div class="fila">
+        <div class="campo">
+          <label for="o-juegan">¿Cuántos juegan cada semana?</label>
+          <input id="o-juegan" name="jugadores_por_partido" type="number" inputmode="numeric" min="2" max="40">
+        </div>
+        <div class="campo">
+          <label for="o-grupo">¿Cuántos hay en el grupo en total?</label>
+          <input id="o-grupo" name="personas_en_grupo" type="number" inputmode="numeric" min="2" max="300">
+        </div>
+      </div>
+      <fieldset class="campo">
+        <legend>¿Cómo pagan hoy?</legend>
+        <div class="opciones">
+          <label class="opcion"><input type="checkbox" name="medios_pago" value="efectivo"> Efectivo</label>
+          <label class="opcion"><input type="checkbox" name="medios_pago" value="transferencia"> Transferencia</label>
+          <label class="opcion"><input type="checkbox" name="medios_pago" value="otro"> Otro</label>
+        </div>
+      </fieldset>
+      <div class="campo">
+        <label for="o-molesto">¿Qué es lo más molesto de organizar la pichanga?</label>
+        <textarea id="o-molesto" name="lo_mas_molesto" maxlength="1500"></textarea>
+      </div>
+      <div class="trampa" aria-hidden="true">
+        <label>No llenar este campo <input type="text" name="trampa" tabindex="-1" autocomplete="off"></label>
+      </div>
+      <div class="consent">
+        <label class="opcion">
+          <input type="checkbox" name="consentimiento" required>
+          <span>Acepto que Pichanguita use mis datos para coordinar el piloto conmigo. Puedo pedir que los borren cuando quiera. <a href="../privacidad/" target="_blank" rel="noopener">Leer cómo cuidamos tus datos</a>.</span>
+        </label>
+      </div>
+      <div data-estado role="status" aria-live="polite" class="estado" hidden></div>
+      <div><button type="submit" class="cta">Inscribir mi grupo</button></div>
+    </form>
+  </section>
+
+  <section aria-labelledby="t-faq">
+    <p class="kicker">Preguntas</p>
+    <h2 id="t-faq">Lo que suelen preguntar</h2>
+    <div>
+      <details><summary>¿Tenemos que dejar el grupo de WhatsApp?</summary><p>No. El grupo sigue igual. Pichanguita ordena la lista, la banca y las cuentas, y tú compartes los resúmenes en el grupo.</p></details>
+      <details><summary>¿Ustedes manejan la plata?</summary><p>No. Se sigue pagando en efectivo o por transferencia al organizador, como hoy. La app solo lleva la cuenta de quién pagó.</p></details>
+      <details><summary>¿Cuánto cuesta?</summary><p>Para los grupos piloto no tiene costo.</p></details>
+      <details><summary>¿Y si en mi grupo hay gente que no se maneja con el celular?</summary><p>Basta con que el organizador la use. A quien no quiera o no pueda, lo anotas tú.</p></details>
+      <details><summary>¿Sirve si no tenemos cancha fija?</summary><p>Por ahora estamos partiendo con grupos que ya tienen día y cancha. Si es tu caso igual inscríbete y te avisamos cuando llegue lo demás.</p></details>
+    </div>
+  </section>
+
+  <footer>Pichanguita · hecho en la V región para la pichanga de todas las semanas. · <a href="../privacidad/">Privacidad</a></footer>
+</div>
+<script type="module" src="/src/publico/organizadores.ts"></script>
+</body>
+</html>
